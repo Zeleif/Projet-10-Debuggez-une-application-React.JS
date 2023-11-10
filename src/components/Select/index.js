@@ -97,5 +97,4 @@ Select.defaultProps = {
   type: "normal",
   name: "select",
 }
-
 export default Select;
