@@ -30,7 +30,7 @@ describe("When Form is created", () => {
 
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
-    // to implement
+   
   })
   it("a list a people is displayed", () => {
     // to implement
@@ -38,7 +38,9 @@ describe("When a page is created", () => {
   it("a footer is displayed", () => {
     // to implement
   })
-  it("an event card, with the last event, is displayed", () => {
-    // to implement
+  it("an event card, with the last event, is displayed", async () => {
+    render(<Home />);
+    const lastEventCard = await screen.getByText("boom", { exact: false });
+    expect(lastEventCard.length).toBeGreaterThan(0);
   })
 });
