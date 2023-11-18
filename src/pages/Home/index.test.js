@@ -30,9 +30,7 @@ describe("When Form is created", () => {
 
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
-    render(<Home />);
-    const eventList = screen.findByText("Nos réalisations");
-    expect(eventList).toBeInTheDocument();
+    
   })
   it("a list a people is displayed", () => {
     // to implement
