@@ -16,8 +16,10 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange(newValue);
+    //  utilisation onChange comme fonction de rappel avec en valeur d'argument newValue pour mettre à jour l'état interne du composant
+    onChange(newValue); 
     setValue(newValue);
+    // inverse l'état actuel de collapsed et met à jour l'état local collapsed qui est utilisé pour basculer l'affichage de la liste déroulante
     setCollapsed(!collapsed);
   };
   return (

@@ -14,7 +14,9 @@ import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
   const {data} = useData();
-  const last = data?.events[data.events.length - 1];
+  // trie du tableau events par ordre chronologique en utilisant la méthode sort avec une fonction de comparaison basée sur la date.
+  const last = data?.events.sort((a, b) => new Date(a.date) - new Date(b.date)).pop();
+
   return <>
     <header>
       <Menu />

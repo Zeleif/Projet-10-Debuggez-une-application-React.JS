@@ -1,4 +1,5 @@
 export const MONTHS = {
+  // l'index d'un tableau commence à 0 dans javascript
   0: "janvier",
   1: "février",
   2: "mars",

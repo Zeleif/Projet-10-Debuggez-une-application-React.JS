@@ -16,6 +16,7 @@ const EventList = () => {
   const filteredEvents = (
     (!type
       ? data?.events
+      //  Si type n'est pas défini (!type), tous les événements sont inclus. Sinon, seuls les événements dont le type correspond à la valeur de type sont inclus.
       : data?.events.filter(event => event.type === type)) || []
   ).filter((_, index) => {
     if (
